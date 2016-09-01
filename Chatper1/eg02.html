@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap基础模板</title>
+    <!-- Bootstrap -->
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap的JS插件 -->
+    <script src="../dist/js/bootstrap.min.js"></script>
+    <!-- 如果要使用Bootstrap的JS插件，则必须引入jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+<body>
+<div id="navbar" class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+        <li class="active"><a href="#home">首页</a></li>
+        <li><a href="#profile">个人资料</a></li>
+        <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true"
+                                aria-expanded="false" href="#">我的书籍<b
+                class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="#dropdown1">python</a></li>
+                <li><a href="#dropdown2">bootstrap</a></li>
+                <li><a href="#dropdown3">java</a></li>
+                <li><a href="#dropdown4">js</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div>
+    <ul id="myTabContent" class="tab-content">
+        <li id="home" class="tab-pane fade active in"><p>点击首页时显示该区域</p></li>
+        <li id="profile" class="tab-pane fade"><p>点击个人资料时显示该区域</p></li>
+        <li id="dropdown1" class="tab-pane fade"><p>点击python料时显示该区域</p></li>
+        <li id="dropdown2" class="tab-pane fade"><p>点击bootstrap资料时显示该区域</p></li>
+        <li id="dropdown3" class="tab-pane fade"><p>点击java时显示该区域</p></li>
+        <li id="dropdown4" class="tab-pane fade"><p>点击js时显示该区域</p></li
+    </ul>
+</div>
+</body>
+</html>
