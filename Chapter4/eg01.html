@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap基础模板</title>
+    <!-- Bootstrap -->
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap的JS插件 -->
+    <script src="../dist/js/bootstrap.min.js"></script>
+    <!-- 如果要使用Bootstrap的JS插件，则必须引入jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+<body>
+<i class="glyphicon glyphicon-search"></i>
+<span class="glyphicon glyphicon-ok-sign"></span>
+<hr/>
+<div>
+    <div>
+        <a class="btn btn-default"><span class="glyphicon glyphicon-align-left">left</span></a>
+        <a class="btn btn-default"><span class="glyphicon glyphicon-align-center">center</span></a>
+        <a class="btn btn-default"><span class="glyphicon glyphicon-align-right">right</span></a>
+        <a class="btn btn-default"><span class="glyphicon glyphicon-align-justify">justify</span></a>
+    </div>
+</div>
+<hr/>
+<div class="btn-group">
+    <a class="btn btn-default btn-primary" href="#"><span class="glyphicon
+glyphicon-user"></span>User</a>
+    <a class="btn btn-default btn-primary dropdown-toggle" data-toggle=""
+href="#"><span class="caret"></span></a>
+    <ul class="dropdown-menu">
+        <li><a href="#"><span class="glyphicon glyphicon-pencil"></span>Edit</a>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-trash">
+</span>Delete</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-ban-circle">
+</span>Ban</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Make admin</a></li>
+    </ul>
+</div>
+<hr />
+<ul class="nav nav-pills nav-stacked">
+    <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-book"></span>Library</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-music"></span>Misc</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-pencil"></span>Applications</a></li>
+</ul>
+<hr />
+<div class="control-group">
+    <div class="control">
+        <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+            <input class="col col-lg-2 form-control" type="text" />
+        </div>
+    </div>
+</div>
+</body>
+</html>
