@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>输入框</title>
+    <!-- Bootstrap -->
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap的JS插件 -->
+    <script src="../dist/js/bootstrap.min.js"></script>
+    <!-- 如果要使用Bootstrap的JS插件，则必须引入jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+<body>
+<div class="input-group input-group-sm">
+    <span class="input-group-addon">$</span>
+    <input class="form-control" type="text" placeholder="额度"/>
+    <span class="input-group-addon">.00</span>
+</div>
+<hr/>
+<div class="row">
+    <div class="col-lg-3">
+        <div class="input-group">
+            <span class="input-group-addon"><input type="checkbox"/></span>
+            <input type="text" class="form-control"/>
+        </div>
+    </div>
+    <div class="col-lg-2">
+        <div class="input-group">
+            <span class="input-group-addon"><input type="radio"/></span>
+            <input type="text" class="form-control"/>
+        </div>
+    </div>
+</div>
+<hr/>
+<div class="row">
+    <div class="col-lg-4">
+        <div class="input-group">
+            <span class="input-group-btn"><button class="btn btn-default">GO!</button></span>
+            <input class="form-control" type="text"/>
+        </div>
+    </div>
+    <div class="col-lg-8">
+        <div class="input-group">
+            <input type="text" class="form-control"/>
+            <span class="input-group-btn"><button class="btn btn-default">GO!</button></span>
+        </div>
+    </div>
+</div>
+<hr/>
+<h3>分段按钮</h3>
+<div class="row">
+    <div class="col-lg-7">
+        <div class="input-group">
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="drowdown">按钮A
+                    <span class="caret"></span>
+                    <span class="sr-only">toggle down</span>
+                </button>
+                <button type="button" class="btn btn-default">按钮B</button>
+                <button type="button" class="btn btn-default">按钮C</button>
+                <ul class="dropdown-menu" role="menu">
+                    <li>3个A</li>
+                    <li>3个B</li>
+                    <li>3个C</li>
+                </ul>
+            </div>
+            <input class="form-control" type="text"/>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="input-group">
+            <input class="form-control" type="text" />
+            <div class="input-group-btn open">
+                <button class="btn btn-default" type="button">按钮D</button>
+                <button class="btn btn-default" type="button">按钮E</button>
+                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">按钮F
+                <span class="caret"></span>
+                    <span class="sr-only">toggle dropdown</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                    <li>3个F</li>
+                    <li>3个E</li>
+                    <li>3个D</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<hr />
+<h3>导航</h3>
+
+</body>
+</html>
