@@ -14,7 +14,7 @@
 </head>
 <body>
 <h3>基础导航条</h3>
-<div class="navbar navbar-default col-lg-8" role="navigation">
+<div class="navbar navbar-default" role="navigation">
     <div class="navbar-header"><a class="navbar-brand" href="#">首页</a></div>
     <ul class="nav navbar-nav">
         <li class="active"><a href="#">预约挂号</a></li>
@@ -23,5 +23,43 @@
         <li><a href="#">我要办事</a></li>
     </ul>
 </div>
+<hr />
+<h3>导航中的表单</h3>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header"><a class="navbar-brand" href="#">Brand</a></div>
+    <form class="navbar-form navbar-left" role="search">
+        <div class="form-group"><input type="text" class="form-control" placeholder="Search" /></div>
+        <buttton class="btn btn-default" type="submit">左按钮</buttton>
+    </form>
+    <form class="navbar-right navbar-form" role="search">
+        <div class="form-group"><input type="text" class="form-control" placeholder="Search" /></div>
+        <button class="btn btn-default" type="submit">右按钮</button>
+    </form>
+</nav>
+<hr />
+<h3>导航条中的文本、按钮、链接</h3>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header"><a class="navbar-brand">Brand</a></div>
+    <ul class="nav navbar-nav">
+        <li class="active"><a href="#">文本</a></li>
+        <li><a href="#">按钮</a></li>
+        <li><a href="#">链接</a></li>
+    </ul>
+    <button class="btn btn-success navbar-btn" type="button">和ul一起使用的按钮</button>
+</nav>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header"><a class="navbar-brand" href="#">Brand</a></div>
+    <div class="nav navbar-nav">
+        <button type="button" class="btn btn-warning navbar-btn">和navbar-brand一起使用的按钮</button>
+        <button type="button" class="btn btn-warning navbar-btn">另一个按钮</button>
+    </div>
+</nav>
+<nav class="navbar navbar-default">
+    <div class="navbar-header"><a class="navbar-brand" href="#">Brand</a></div>
+    <div class="nav navbar-nav">
+        <button type="button" class="btn btn-danger navbar-btn">2个单独的按钮</button>
+        <button type="button" class="btn btn-danger navbar-btn">2个单独的按钮</button>
+    </div>
+</nav>
 </body>
 </html>
