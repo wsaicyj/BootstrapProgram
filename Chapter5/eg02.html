@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>下拉列表</title>
+    <!-- Bootstrap -->
+    <link href="../dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap的JS插件 -->
+    <script src="../dist/js/bootstrap.min.js"></script>
+    <!-- 如果要使用Bootstrap的JS插件，则必须引入jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+<body>
+<div class="navbar navbar-default" id="navbar-example">
+    <a class="navbar-brand" href="#">Project</a>
+    <ul class="nav navbar-nav" role="navigation" >
+        <li class="dropdown">
+            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown" id="yuyue">预约挂号<b class="caret"></b></a>
+            <ul class="dropdown-menu" aria-labelledby="yuyue" role="menu">
+                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">按医院挂号</a></li>
+                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">按科室挂号</a></li>
+                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">按症状挂号</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown" id="health">健康服务<b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="yuyue">
+                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">健康档案</a></li>
+                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">健康科普</a></li>
+                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">流感指数</a></li>
+                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">健康咨询</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right" role="navigation">
+        <li class="dropdown">
+            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown" id="info">信息公开<b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu">
+                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">服务信息</a></li>
+                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">文件通知</a></li>
+                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">政策法规</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

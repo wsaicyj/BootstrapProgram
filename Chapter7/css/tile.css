@@ -1,0 +1,91 @@
+.tile {
+    position: relative;
+    overflow: hidden;    /* 内部元素溢出时，将其隐藏 */
+    display: block;  /* 块级显示 */
+    float: left; /* 左浮动 */
+    width: 120px;
+    height: 120px;
+    margin: 0 10px 10px 0;
+    padding: 0;
+    cursor: pointer;   /* 默认鼠标移动上去时显示手型 */
+    background-color: #eeeeee;
+    box-shadow: inset 0 0 1px #ffffcc; /* 设置少许的阴影 */
+}
+.tile:hover {
+    outline: #999999 solid 3px;  /* 鼠标移动时设置轮廓颜色和边框 */
+}
+.tile.no-outline {
+    outline-color: transparent;
+}
+.tile-alert {
+
+}
+.tile-inf0 {
+
+}
+/* bg开头为背景颜色 */
+.bg-red {
+    background-color: #e51400 !important;
+}
+.bg-green {
+    background-color: #60a917 !important;
+}
+.bg-darkBlue {
+    background-color: #16499a !important;
+}
+/* 内部文本颜色 */
+.fg-red {
+    color: #e51400 !important;
+}
+.fg-green {
+    color: #60a917 !important;
+}
+.fg-darkBlue {
+    color: #16499a !important;
+}
+/* 轮廓样式颜色 */
+.ol-red {
+    outline-color: #e51400 !important;
+}
+.ol-green {
+    outline-color: #60a917 !important;
+}
+.ol-darkBlue {
+    outline-color: #16499a !important;
+}
+/* 边框颜色样式 */
+.bd-red {
+    border-color: #e51400 !important;
+}
+.bd-green {
+    border-color: #60a917 !important;
+}
+.bd-darkBlue {
+    border-color: #16499a !important;
+}
+
+/* 50%大小 */
+.half {
+    width: 60px;
+    height: 60px;
+}
+
+/* 2倍大小 */
+.title.double {
+    width: 250px;
+}
+
+/* 3倍大小 */
+.title.triple {
+    width: 380px;
+}
+
+/* 垂直2倍大小 */
+.title.double-vertical {
+    height: 250px;
+}
+
+/* 垂直3倍大小 */
+.title.triple-vertical {
+    height: 380px;
+}
