@@ -1,0 +1,214 @@
+.tile {
+    position: relative;
+    overflow: hidden; /* 内部元素溢出时，将其隐藏 */
+    display: block; /* 块级显示 */
+    float: left; /* 左浮动 */
+    width: 120px;
+    height: 120px;
+    margin: 0 10px 10px 0;
+    padding: 0;
+    cursor: pointer; /* 默认鼠标移动上去时显示手型 */
+    background-color: #eeeeee;
+    box-shadow: inset 0 0 1px #ffffcc; /* 设置少许的阴影 */
+}
+
+.tile:hover {
+    outline: #999999 solid 3px; /* 鼠标移动时设置轮廓颜色和边框 */
+}
+
+.tile.no-outline {
+    outline-color: transparent;
+}
+
+.tile .tile-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: block;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+image {
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+}
+
+.tile .tile-content .icon[class*="icon-"],
+.tile .tile-content .icon[class*="glyphicon-"],
+.tile .tile-content .icon img {
+    line-height: 56px;
+    height: 56px;
+    width: 56px;
+    font-size: 48px;
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -28px;
+    margin-left: -28px;
+}
+
+/* brand样式 */
+.tile .tile-brand {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 29px;
+    margin: 0;
+}
+.tile .tile-brand .opacity {
+    opacity: .7;
+}
+.tile .tile-brand:before,
+.tile .tile-brand:after {
+    display: table;
+    content: "";
+}
+.tile .tile-brand:after {
+    clear: both;
+}
+
+.tile .tile-brand .label,
+.tile .tile-brand .text {
+    float: left;
+    display: block;
+    font-size: 10pt;
+    margin: 5px 20px 2px 5px;
+    background: transparent;
+    color: #000;
+}
+
+.tile .tile-brand .text {
+    margin: 4px 5px;
+    font-size: 8pt;
+    line-height: 10pt;
+}
+
+.tile .tile-brand .badge {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    width: 29px;
+    height: 29px;
+    text-align: center;
+    color: #fff;
+    padding: 5px;
+    margin: 0;
+    vertical-align: middle !important;
+    display: block;
+    font-size: 10pt;
+    border-radius: 0px;
+}
+
+/* bg开头为背景颜色 */
+.bg-red {
+    background-color: #e51400 !important;
+}
+
+.bg-green {
+    background-color: #60a917 !important;
+}
+
+.bg-darkBlue {
+    background-color: #16499a !important;
+}
+
+/* 内部文本颜色 */
+.fg-red {
+    color: #e51400 !important;
+}
+
+.fg-green {
+    color: #60a917 !important;
+}
+
+.fg-darkBlue {
+    color: #16499a !important;
+}
+
+/* 轮廓样式颜色 */
+.ol-red {
+    outline-color: #e51400 !important;
+}
+
+.ol-green {
+    outline-color: #60a917 !important;
+}
+
+.ol-darkBlue {
+    outline-color: #16499a !important;
+}
+
+/* 边框颜色样式 */
+.bd-red {
+    border-color: #e51400 !important;
+}
+
+.bd-green {
+    border-color: #60a917 !important;
+}
+
+.bd-darkBlue {
+    border-color: #16499a !important;
+}
+
+/* 50%大小 */
+.half {
+    width: 60px;
+    height: 60px;
+}
+
+/* 2倍大小 */
+.double {
+    width: 250px;
+}
+
+/* 3倍大小 */
+.triple {
+    width: 380px;
+}
+
+/* 垂直2倍大小 */
+.double-vertical {
+    height: 250px;
+}
+
+/* 垂直3倍大小 */
+.triple-vertical {
+    height: 380px;
+}
+
+/* 选中状态 */
+.selected {
+    border: 4px #4390df solid;
+}
+
+.selected:after {
+    position: absolute; /* 绝对定位 */
+    display: block;
+    border-top: 28px solid #4390df;
+    border-left: 28px solid transparent;
+    right: 0;
+    top: 0;
+    content: "";
+    z-index: 101;
+}
+
+.selected:before {
+    position: absolute;
+    display: block;
+    content: "\e010";
+    color: #fff;
+    right: 0;
+    top: 0;
+    font-size: 10pt;
+    font-weight: normal;
+    z-index: 102;
+}
