@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>导航条</title>
     <!-- Bootstrap -->
-    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../dist/css/bootstrap.css" rel="stylesheet" type="text/css">
     <!-- Bootstrap的JS插件 -->
     <script src="../dist/js/bootstrap.min.js"></script>
     <!-- 如果要使用Bootstrap的JS插件，则必须引入jQuery -->
@@ -23,20 +23,20 @@
         <li><a href="#">我要办事</a></li>
     </ul>
 </div>
-<hr />
+<hr/>
 <h3>导航中的表单</h3>
 <nav class="navbar navbar-default" role="navigation">
     <div class="navbar-header"><a class="navbar-brand" href="#">Brand</a></div>
     <form class="navbar-form navbar-left" role="search">
-        <div class="form-group"><input type="text" class="form-control" placeholder="Search" /></div>
+        <div class="form-group"><input type="text" class="form-control" placeholder="Search"/></div>
         <buttton class="btn btn-default" type="submit">左按钮</buttton>
     </form>
     <form class="navbar-right navbar-form" role="search">
-        <div class="form-group"><input type="text" class="form-control" placeholder="Search" /></div>
+        <div class="form-group"><input type="text" class="form-control" placeholder="Search"/></div>
         <button class="btn btn-default" type="submit">右按钮</button>
     </form>
 </nav>
-<hr />
+<hr/>
 <h3>导航条中的文本、按钮、链接</h3>
 <nav class="navbar navbar-default" role="navigation">
     <div class="navbar-header"><a class="navbar-brand">Brand</a></div>
@@ -71,7 +71,7 @@
     固定在底部
 </div>
 -->
-<hr />
+<hr/>
 <h3>响应式导航条</h3>
 <div class="navbar navbar-default">
     <div class="navbar-header">
@@ -99,16 +99,16 @@
         </ul>
     </div>
 </div>
-<hr />
+<hr/>
 <h3>面包屑导航</h3>
 <ul class="breadcrumb">
     <li><a href="#">Home</a></li>
     <li><a href="#">Library</a></li>
     <li class="active"><a>Data</a></li>
 </ul>
-<hr />
-<h3>页码分页</h3>
-<ul class="pagination">
+<hr/>
+<h3>分页导航</h3>
+<ul class="pagination pagination-sm">
     <li class="disabled"><span href="#"><<</span></li>
     <li class="active"><span href="#">1</span></li>
     <li><span href="#">2</span></li>
@@ -117,31 +117,124 @@
     <li><span href="#">5</span></li>
     <li><span href="#">>></span></li>
 </ul>
-<hr />
-<h3>列表组</h3>
-<ul class="list-group">
-    <li class="list-group-item"><span class="badge">14</span> js编程精解</li>
-    <li class="list-group-item">js设计模式</li>
-    <li class="list-group-item">js启示录</li>
-    <li class="list-group-item">呵呵的书</li>
+<hr/>
+<h3>翻页</h3>
+<ul class="pager">
+    <li><span href="#">上一页</span></li>
+    <li><span href="#">下一页</span></li>
 </ul>
-<div class="list-group">
-    <a href="#" class="list-group-item list-group-item-success active">js编程精解<span class="badge">1</span></a>
-    <a href="#" class="list-group-item list-group-item-warning">js设计模式<span class="badge">2</span></a>
-    <a href="#" class="list-group-item">
-        <h4 class="list-group-item-heading">js启示录</h4>
-        <p class="list-group-item-text">....</p>
-    </a>
-    <a href="#" class="list-group-item">呵呵的书<span class="badge">4</span></a>
+<hr/>
+<h3>标签</h3>
+<h1>10个最好的JS动画库和框架<span class="label label-danger">NEW</span></h1>
+<h2>10个最好的JS动画库和框架<span class="label label-default">NEW</span></h2>
+<h3>10个最好的JS动画库和框架<span class="label label-success">NEW</span></h3>
+<h4>10个最好的JS动画库和框架<span class="label label-primary">NEW</span></h4>
+<h5>10个最好的JS动画库和框架<span class="label label-info">NEW</span></h5>
+<h6>10个最好的JS动画库和框架<span class="label label-warning">NEW</span></h6>
+<hr/>
+<h3>徽章</h3>
+<a href="#">Inbox<span class="badge">30</span></a>
+<ul class="nav nav-pills nav-stacked">
+    <li class="active">
+        <a href="#">
+            <span class="badge pull-right">42</span>
+            Home
+        </a>
+    </li>
+</ul>
+<hr/>
+<h3>大屏幕展播</h3>
+<div class="jumbotron">
+    <h1>Hello,world!</h1>
+    <p>...</p>
+    <p><a class="btn btn-primary btn-large">Learn about...</a></p>
+</div>
+<hr/>
+<h3>页面标题</h3>
+<div class="page-header">
+    <h1>Page Header
+        <small>first of all</small>
+    </h1>
+</div>
+<hr/>
+<h3>缩略图</h3>
+<div class="row">
+    <div class="col-sm-6 col-md-3">
+        <a href="#" class="thumbnail">
+            <img src="../img/1.jpg" alt=""/>
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="../img/3.jpg" alt=""/>
+            <h3>Thumbnail label</h3>
+            <p>...</p>
+            <p>
+                <a class="btn btn-default" type="button">Action</a>
+                <a class="btn btn-primary">Action2</a>
+            </p>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+            <img src="../img/2.jpg"/>
+            <h3>thumbnail label</h3>
+            <p>呵呵</p>
+            <p>
+                <a class="btn btn-warning">button</a>
+                <a class="btn btn-success">button2</a>
+            </p>
+        </div>
+    </div>
 </div>
 <hr />
-<h3>面板</h3>
-<div class="panel panel-primary">
-    <div class="panel-heading">面板header</div>
-    <div class="panel-body">
-        这里是面板内容
+<h3>警告框</h3>
+<div class="alert alert-danger alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert">x</button>
+    <strong>Warning!</strong>
+    <p>Best check of yourself!</p>
+</div>
+<hr />
+<h3>警告中的链接</h3>
+<div class="alert alert-success">
+    <a href="#" class="alert-link">...</a>
+</div>
+<div class="alert alert-danger">
+    <a href="#" class="alert-link">...</a>
+</div>
+<div class="alert alert-info">
+    <a href="#" class="alert-link">...</a>
+</div>
+<hr />
+<h3>进度条</h3>
+<div class="progress progress-striped">
+    <div class="progress-bar progress-bar-success" style="width:30%;"></div>
+</div>
+<div class="progress active">
+    <div class="progress-bar progress-bar-danger progress-bar-striped" style="width:70%;"></div>
+</div>
+<div class="progress">
+    <div class="progress-bar progress-bar-success" style="width:35%"></div>
+    <div class="progress-bar progress-bar-danger" style="width:20%"></div>
+    <div class="progress-bar progress-bar-info" style="width:10%;"></div>
+</div>
+<div class="progress">
+    <div class="progress-bar progress-bar-warning" style="width:60%" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+        <span class="sr-only">60% complete!</span>
     </div>
-    <div class="panel-footer">面板footer</div>
+</div>
+<hr />
+<h3>媒体对象</h3>
+<div class="media">
+    <a href="#" class="pull-left">
+        <img src="..." class="media-object" />
+    </a>
+    <div class="media-body">
+        <h4 class="media-heading">Media heading!</h4>
+    </div>
 </div>
 </body>
 </html>
