@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>列表</title>
+    <!-- Bootstrap -->
+    <link href="../dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap的JS插件 -->
+    <script src="../dist/js/bootstrap.js"></script>
+    <!-- 如果要使用Bootstrap的JS插件，则必须引入jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+<body>
+<div class="panel panel-default">
+    <div class="panel-heading clearfix">
+        <div class="pull-left">
+            <button class="btn btn-default">New</button>
+            <button class="btn btn-warning">Disable</button>
+            <button class="btn btn-danger">Delete</button>
+        </div>
+        <div class="pull-right">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle active" data-toggle="dropdown">
+                    Filter By Disabled <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Filter By Account status</a></li>
+                    <li><a href="#">Filter By Department</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Reset</a></li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Sort By FirstName <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu pull-right" role="menu">
+                    <li><a href="#">Sort by FirstName</a></li>
+                    <li><a href="#">Sort by Email</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Reset</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Birthday</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>陈帅哥</td>
+            <td>1988-11-09</td>
+            <td>cyj@163.com</td>
+            <td>13828400001</td>
+            <td>
+                <button class="btn btn-xs btn-info" data-toggle="modal" data-target="#rolePopUp"><span class="glyphicon glyphicon-list"></span>Info</button>
+                <div class="modal fade" id="rolePopUp">
+                   <div class="modal-dialog">
+                       <div class="modal-content">
+                           <div class="modal-header">
+                               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                   x
+                               </button>
+                               <h4 class="modal-title">Roles of Tom Xu</h4>
+                           </div>
+                           <div class="modal-body">
+                               <table class="table table-hover">...</table>
+                           </div>
+                           <div class="modal-footer">
+                               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+                <button class= "btn btn-xs btn-success"><span class="glyphicon glyphicon-user"></span>Role</button>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-xs btn-primary dropdown-toggle" data-toggle="dropdown">
+                        More <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Tasks</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Others</a></li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>陈帅哥</td>
+            <td>1988-11-09</td>
+            <td>cyj@163.com</td>
+            <td>13828400001</td>
+            <td>
+                <button class="btn btn-xs btn-info">Info</button>
+                <button class="btn btn-xs btn-success">Role</button>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-xs btn-primary dropdown-toggle" data-toggle="dropdown">
+                        More <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Tasks</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Others</a></li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>陈帅哥</td>
+            <td>1988-11-09</td>
+            <td>cyj@163.com</td>
+            <td>13828400001</td>
+            <td>
+                <button class="btn btn-xs btn-info">Info</button>
+                <button class="btn btn-xs btn-success">Role</button>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-xs btn-primary dropdown-toggle" data-toggle="dropdown">
+                        More <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Tasks</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Others</a></li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>陈帅哥</td>
+            <td>1988-11-09</td>
+            <td>cyj@163.com</td>
+            <td>13828400001</td>
+            <td>
+                <button class="btn btn-xs btn-info">Info</button>
+                <button class="btn btn-xs btn-success">Role</button>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-xs btn-primary dropdown-toggle" data-toggle="dropdown">
+                        More <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Tasks</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Others</a></li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>陈帅哥</td>
+            <td>1988-11-09</td>
+            <td>cyj@163.com</td>
+            <td>13828400001</td>
+            <td>
+                <button class="btn btn-xs btn-info">Info</button>
+                <button class="btn btn-xs btn-success">Role</button>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-xs btn-primary dropdown-toggle" data-toggle="dropdown">
+                        More <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Tasks</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Others</a></li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>陈帅哥</td>
+            <td>1988-11-09</td>
+            <td>cyj@163.com</td>
+            <td>13828400001</td>
+            <td>
+                <button class="btn btn-xs btn-info">Info</button>
+                <button class="btn btn-xs btn-success">Role</button>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-xs btn-primary dropdown-toggle" data-toggle="dropdown">
+                        More <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Tasks</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Others</a></li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>陈帅哥</td>
+            <td>1988-11-09</td>
+            <td>cyj@163.com</td>
+            <td>13828400001</td>
+            <td>
+                <button class="btn btn-xs btn-info">Info</button>
+                <button class="btn btn-xs btn-success">Role</button>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-xs btn-primary dropdown-toggle" data-toggle="dropdown">
+                        More <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Tasks</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Others</a></li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>陈帅哥</td>
+            <td>1988-11-09</td>
+            <td>cyj@163.com</td>
+            <td>13828400001</td>
+            <td>
+                <button class="btn btn-xs btn-info">Info</button>
+                <button class="btn btn-xs btn-success">Role</button>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-xs btn-primary dropdown-toggle" data-toggle="dropdown">
+                        More <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Tasks</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Others</a></li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>陈帅哥</td>
+            <td>1988-11-09</td>
+            <td>cyj@163.com</td>
+            <td>13828400001</td>
+            <td>
+                <button class="btn btn-xs btn-info">Info</button>
+                <button class="btn btn-xs btn-success">Role</button>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-xs btn-primary dropdown-toggle" data-toggle="dropdown">
+                        More <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Tasks</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Others</a></li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>陈帅哥</td>
+            <td>1988-11-09</td>
+            <td>cyj@163.com</td>
+            <td>13828400001</td>
+            <td>
+                <button class="btn btn-xs btn-info">Info</button>
+                <button class="btn btn-xs btn-success">Role</button>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-xs btn-primary dropdown-toggle" data-toggle="dropdown">
+                        More <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Tasks</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Others</a></li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <ul class="pagination square">
+                <li class="disabled"><span>Prev</span></li>
+                <li class="active"><a href="#">1<span class="sr-only">(current)</span></a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li class="disabled"><span>...</span></li>
+                <li><a href="#">14</a></li>
+                <li><a href="#">15</a></li>
+                <li><a href="#">16</a></li>
+                <li><a href="#">17</a></li>
+                <li><a href="#">Next</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap基础模板</title>
+    <!-- Bootstrap -->
+    <link href="css/tile.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap的JS插件 -->
+    <script src="../dist/js/bootstrap.js"></script>
+    <!-- 如果要使用Bootstrap的JS插件，则必须引入jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+     +function ($) {
+         "use strict"
+         //后续步骤
+         //2.tile插件类及原型方法的定义
+         //3.在jQuery上定义tile插件，并重设插件构造器，可以通过该属性获取插件的真实类函数
+         //4.防冲突处理
+         //5.绑定触发事件
+         var Tile = function (element,options) {
+             this.$element = options;
+             this.options = options;
+             this.frames = this.$element.children(".tile-content")  //查找有多少个主区域需要移动
+             this.currentIndex = 0;
+             this.interval = 0;
+             this.size = {
+                 'width': this.$element.width(),
+                 'height': this.$element.height()
+             };
+             //确保默认的参数都是正常传值，如果是undefined，就使用默认值
+             if (this.options.direction == undefined) {
+                 this.options.direction = Tile.DEFAULTS.direction;
+             }
+             if (this.options.period == undefined) {
+                 this.options.period = Tile.DEFAULTS.period;
+             }
+             if (this.options.duration == undefined) {
+                 this.options.duration == Tile.DEFAULTS.duration;
+             }
+             if (this.options.easing == undefined) {
+                 this.options.easing = Tile.DEFAULTS.easing;
+             }
+
+             //定义一个默认的动画过渡效果，可以使用jQuery的easing插件
+             $.easing.doubleSqrt = function(t) {
+                 return Math.sqrt(Math.sqrt(t));
+             };
+         }
+
+         //默认值定义
+         Tile.DEFAULTS = {
+             direction: 'slideLeft', //默认滚去方向
+             period: 3000, //默认暂停间隔
+             duration: 700, //默认滚动时间
+             easing: 'doubleSqrt' //默认动画过渡效果
+         }
+
+         //启动执行动画
+         Tile.prototype.start = function() {
+             var that = this;
+             this.interval = setInterval(function() {
+                 that.animate();
+
+             },that.options.period);
+         }
+
+         //暂停动画
+         Tile.prototype.pause = function(){
+             var that = this;
+             clearInterval(that.interval);
+         }
+
+         //动画处理入口，再分别调用各自方向的动画处理效果
+         Tile.prototype.animate = function() {
+             var that = this;
+             var currentFrame = this.frames[this.currentIndex],nextFrame;
+             if (this.currentIndex >= this.frames.length) {
+                 this.currentIndex = 0;
+             }
+             nextFrame = this.frames[this.currentIndex];
+
+             //根据滚动方向，分别调用相应的内部方法，参数是：
+             //当前要滚动的tile-content、下一个要滚动的tile-content
+             switch(this.options.direction) {
+                 case 'slideLeft':this.slideLeft(currentFrame,nextFrame);break;
+                 case 'slideRight':this.slideRight(currentFrame,nextFrame);break;
+                 case 'slideDown':this.slideDown(currentFrame,nextFrame);break;
+                 case 'slideUpDown':this.slideUpDown(currentFrame,nextFrame);break;
+                 case 'slideLeftRight':this.slideLeftRight(currentFrame,nextFrame);break;
+                 default:this.slideUp(currentFrame,nextFrame);
+             }
+         }
+
+     }(window.jQuery);
+</script>
+<div class="tile double bg-darkBlue" data-toggle="tile" data-direction="slideLeftRight"
+     data-period="700" data-duration="3000" data-easing="doubleSqrt"  >
+    <div class="tile-content bg-red">a区</div>
+    <div class="tile-content bg-green">b区</div>
+    <div class="tile-content bg-pink">c区</div>
+    <div class="tile-content bg-red">d区</div>
+</div>
+</body>
+</html>

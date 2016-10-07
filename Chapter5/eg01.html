@@ -13,8 +13,66 @@
     <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 <body>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="popupCSS">弹出框</button>
-<div class="modal fade popupCSS" id="myModal" data-modal="">
+<script>
+    +function ($) {
+        "use strict";
+        var Modal = function (element,options) { //element表示modal弹出框容器及内部元素，options是设置选项
+            this.options = options   //传进来的各种参数
+            this.$element = $(element)
+            this.$backdrop = null   //modal下面的背景对象
+            this.isShown = null     //默认情况下，不设置是否已经显示弹窗
+
+            //如果设置了remote,就加载remote指定url的内容到modal-content样式的元素内，并触发loaded.bs.modal事件
+            if (this.options.remote) {
+                this.$element.find('.modal-content').load(this.options.remote,$.proxy(function(){
+                    this.$element.trigger('loaded.bs.modal')
+                },this))
+            }
+        }
+        Modal.DEFAULTS = {     //默认设置
+            backdrop:true,    //默认单击弹窗以外的地方时自动关闭弹窗
+            keyboard: true,   //默认设置，按esc键关闭弹窗
+            show: true        //默认设置，单击触发元素时打开弹窗
+        }
+
+        //反转弹窗状态
+        Modal.prototype.toggle = function (_relatedTarget) {
+            return this[!this.isShown ? 'show' : 'hide'](_relatedTarget)  //如果是关闭状态，则打开弹窗，否则就关闭
+        };
+
+        //打开弹窗
+        Modal.prototype.show = function (_relatedTarget) {
+            var that = this   //当前modal对象赋值为that,防止作用域冲突
+            var e = $.Event('show.bs.modal',{relatedTarget:_relatedTarget}) //定义弹窗前的触发事件
+            this.$element.trigger(e)   //打开弹窗前，触发事件
+            //如果已经打开了(或者曾经被阻止过)，则退出执行，后续代码不做处理
+            if (this.isShown || e.isDefaultPrevented()) return
+            this.isShown = true
+            this.escape()
+        };
+
+        //关闭弹窗
+        Modal.prototype.hide = function(e) {};
+
+        //确保当前打开的弹窗处于焦点状态
+        Modal.prototype.enforceFocus = function() {};
+
+        //按esc键是否退出的处理
+        Modal.prototype.escape = function() {};
+
+        //关闭弹窗
+        Modal.prototype.hideModal = function() {};
+
+        //删除背景，关闭弹窗时触发
+        Modal.prototype.removeBackdrop = function() {};
+
+        //添加背景，打开弹窗时触发
+        Modal.prototype.backdrop = function (callback) {};
+
+    }(window.jQuery);
+</script>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">弹出框</button>
+<div class="modal fade" id="myModal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

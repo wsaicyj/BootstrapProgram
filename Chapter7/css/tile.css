@@ -26,10 +26,13 @@
     height: 100%;
     padding: 0;
     margin: 0;
-    display: block;
+    display: none;
     left: 0;
     top: 0;
     overflow: hidden;
+}
+.tile .tile-content:first-child {
+    display: block;
 }
 
 image {
@@ -91,6 +94,46 @@ image {
     line-height: 10pt;
 }
 
+.tile-group {
+    float: left;
+    display: block;
+    padding: 40px 0px 0px 10px; /* 40像素时给titl标题留的位置，10像素时左边的间隙 */
+    position: relative;
+    color: #fff;
+}
+
+.tile-group .tile-group-title {
+    font-size: 18px;
+    line-height: 20px;
+    position: absolute;
+    top: 10px;
+    color: inherit;
+}
+
+.tile-group.two,.tile-group.double {
+    width: 270px;
+}
+
+.tile-group.three,.tile-group.triple {
+    width:400px;
+}
+
+.tile-group.four,.tile-group.quadro {
+    width: 530px;
+}
+
+.tile-group.five {
+    width: 660px;
+}
+
+.tile-group.six {
+    width: 790px;
+}
+
+.tile-group.seven {
+    width: 920px;
+}
+
 .tile .tile-brand .badge {
     position: absolute;
     bottom: 0;
@@ -118,6 +161,10 @@ image {
 
 .bg-darkBlue {
     background-color: #16499a !important;
+}
+
+.bg-pink {
+    background-color: pink;
 }
 
 /* 内部文本颜色 */

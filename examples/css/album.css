@@ -1,0 +1,50 @@
+body {
+    min-height: 75rem;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-collapse .container-fluid {
+    padding: 2rem 2.5rem;
+    border-bottom: 1px solid #55595c;
+}
+
+.navbar-collapse h4 {
+    color: #818;
+}
+
+.navbar-collapse .text-muted {
+    color: #818a91;
+}
+
+.about {
+    float: left;
+    max-width: 30rem;
+    margin-right: 3rem;
+}
+
+.social a {
+    font-weight: 500;
+    color: #ccc;
+}
+
+.social a:hover {
+    color: #ec971f;
+}
+
+.jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    margin-bottom: 0;
+    background-color: #fff;
+}
+
+.jumbotron p:last-child {
+    font-weight: 300;
+}
+
+.jumbotron-heading {
+    max-width: 40rem;
+}
