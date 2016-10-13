@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Signin Template for Bootstrap</title>
+    <!-- Bootstrap -->
+    <link href="../dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap的JS插件 -->
+    <script src="../dist/js/bootstrap.min.js"></script>
+    <!-- 如果要使用Bootstrap的JS插件，则必须引入jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../dist/js/ie10-viewport-bug-workaround.js"></script>
+    <!-- 自定义样式 -->
+    <link href="css/signin.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="container">
+    <form class="form-sign">
+        <h2 class="form-sign-heading">登录</h2>
+        <label for="email" class="sr-only">邮箱地址:</label>
+        <input class="form-control" type="email" id="email" placeholder="邮箱地址" required autofocus >
+        <label for="pwd" class="sr-only">密码:</label>
+        <input class="form-control" type="password" id="pwd" placeholder="密码" required>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" id="rember" value="Remember Me" >记住账号
+            </label>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">登录</button>
+    </form>
+</div>
+</body>
+</html>
